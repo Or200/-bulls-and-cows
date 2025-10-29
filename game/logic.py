@@ -35,5 +35,10 @@ def init_state(secret: str, length: int, max_tries: int | None, unique_digits: b
 
 
 def apply_guess(state: dict, guess: str) -> tuple[int, int]:
-    pass
+    state["tries_used"] += 1
+    state["history"].append((guess,) + score_guess(state["secret"], guess))
+    state["seen"].add(guess)
+
+
+    print(state)
 
