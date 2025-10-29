@@ -11,9 +11,6 @@ def is_valid_guess(guess: str, length: int, unique_digits: bool = True) -> tuple
         
     return False, guess
             
-
-    
-
 def is_new_guess(guess: str, history: set[str]) -> bool:
-    pass
+    return not guess in history
 
