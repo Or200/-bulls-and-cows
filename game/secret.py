@@ -1,6 +1,6 @@
 import random
 
-def generate_secret(length: int = 4, *, unique_digits: bool = True, allow_leading_zero: bool = False) -> str:
+def generate_secret(length: int = 4, unique_digits: bool = True, allow_leading_zero: bool = False) -> str:
     secret_num_list = []
     secret_num_set = set()
 
