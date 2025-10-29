@@ -9,11 +9,11 @@ def prompt_guess(length: int) -> str:
         print("Error - input 4 num")
 
 def print_feedback(guess: str, bulls: int, cows: int) -> None:
+    print(f"guess: {guess}.  bulls: {bulls}.  cows: {cows} ")
+
+def print_status(state: dict) -> None:
     pass
 
-def print_status(state: GameState) -> None:
-    pass
-
-def print_result(state: GameState, won: bool) -> None:
+def print_result(state: dict, won: bool) -> None:
     pass
 
