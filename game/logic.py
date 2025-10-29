@@ -13,7 +13,6 @@ def score_guess(secret: str, guess: str) -> tuple[int, int]:
     
     cows = cows - bulls
 
-    print(bulls, cows)
     return bulls, cows 
 
 
@@ -21,8 +20,8 @@ def is_won(bulls: int, length: int) -> bool:
     return bulls == length
 
     
-def init_state(secret: str, length: int, max_tries: int | None, unique_digits: bool, allow_leading_zero: bool, seen: dict) -> dict:
-    GameState = {
+def init_state(secret: str, length: int, max_tries: int | None, unique_digits: bool, allow_leading_zero: bool, seen: set) -> dict:
+    game_state = {
     "secret": secret,
     "length": length,
     "max_tries": max_tries,
@@ -32,6 +31,8 @@ def init_state(secret: str, length: int, max_tries: int | None, unique_digits: b
     "history": [],
     "seen": seen
 }
+    
+    return game_state
 
 
 def apply_guess(state: dict, guess: str) -> tuple[int, int]:
@@ -39,6 +40,5 @@ def apply_guess(state: dict, guess: str) -> tuple[int, int]:
     state["history"].append((guess,) + score_guess(state["secret"], guess))
     state["seen"].add(guess)
 
-
-    print(state)
+    return score_guess(state["secret"], guess)
 

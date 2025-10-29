@@ -12,7 +12,7 @@ def print_feedback(guess: str, bulls: int, cows: int) -> None:
     print(f"guess: {guess}.  bulls: {bulls}.  cows: {cows} ")
 
 def print_status(state: dict) -> None:
-    print(f"your try: {state["tries_used"]} your history: {state["history"]}")
+    print(f"your try: {state["tries_used"]}.  your history: {state["history"]}")
 
-def print_result(state: dict, won: bool) -> None:
+def print_result(state: dict) -> None:
     print(f"The number is: {state["secret"]} your try: {state["tries_used"]} your history: {state["history"]}")
