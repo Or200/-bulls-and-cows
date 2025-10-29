@@ -18,7 +18,7 @@ def score_guess(secret: str, guess: str) -> tuple[int, int]:
 
 
 def is_won(bulls: int, length: int) -> bool:
-    pass
+    return bulls == length
 
 # class GameState(TypedDict): {
 #     "secret": str,
