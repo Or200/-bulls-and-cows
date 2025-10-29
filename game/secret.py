@@ -25,5 +25,5 @@ def generate_secret(length: int = 4, unique_digits: bool = True, allow_leading_z
         
 
 
-    secret_num = "-".join(secret_num_list)
+    secret_num = "".join(secret_num_list)
     return secret_num
